@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Netlify Identity Widget si aad Admin-ka ugu gasho -->
-    <script src="https://identity.netlify.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- Netlify Identity Widget - Kani wuxuu qabanayaa xaqiijinta emailka -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -264,7 +264,8 @@
             });
         });
 
-        // Netlify Identity login redirection
+        // Netlify Identity Login & Confirmation Token handling script
+        // Kani wuxuu si toos ah kuu geynayaa /admin/ marka aad email-ka xaqiijiso
         if (window.netlifyIdentity) {
             window.netlifyIdentity.on("init", user => {
                 if (!user) {
