@@ -1,15 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PitchBanter | Sports News & Gear</title>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <!-- Netlify Identity Widget si aad Admin-ka ugu gasho -->
+    <script src="https://identity.netlify.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -20,20 +19,19 @@
                     },
                     colors: {
                         brand: {
-                            light: '#10b981', /* Emerald 500 - Trust & Action */
-                            DEFAULT: '#059669', /* Emerald 600 */
-                            dark: '#047857', /* Emerald 700 */
+                            light: '#10b981',
+                            DEFAULT: '#059669',
+                            dark: '#047857',
                         },
                         dark: {
-                            bg: '#0f172a', /* Slate 900 */
-                            card: '#1e293b', /* Slate 800 */
+                            bg: '#0f172a',
+                            card: '#1e293b',
                         }
                     }
                 }
             }
         }
     </script>
-
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -46,7 +44,6 @@
             0%, 100% { opacity: 1; transform: scale(1); }
             50% { opacity: 0.8; transform: scale(1.05); }
         }
-        /* Hidden scrollbar for sleekness */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -72,7 +69,6 @@
                     <i class="fa-solid fa-bolt text-brand text-2xl"></i>
                     <span class="font-bold text-2xl tracking-tight">Pitch<span class="text-brand">Banter</span></span>
                 </div>
-
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-brand dark:hover:text-brand font-semibold transition-colors">News</a>
                     <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-brand dark:hover:text-brand font-semibold transition-colors">Analysis</a>
@@ -80,17 +76,14 @@
                     <a href="#" class="bg-brand hover:bg-brand-dark text-white px-4 py-2 rounded-full font-bold transition-transform hover:scale-105 shadow-lg shadow-brand/30">
                         <i class="fa-solid fa-cart-shopping mr-2"></i>Gear
                     </a>
-
                     <a href="https://www.facebook.com/share/g/1953fhgAhm/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-bold transition-colors flex items-center gap-1" title="Join our Facebook Group">
                         <i class="fa-brands fa-facebook text-xl"></i> Join 41K+ Fans
                     </a>
-
                     <!-- Dark Mode Toggle Desktop -->
                     <button id="themeToggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="Toggle Dark Mode">
                         <i class="fa-solid fa-moon text-gray-600 dark:text-gray-300" id="themeIcon"></i>
                     </button>
                 </div>
-
                 <div class="md:hidden flex items-center space-x-4">
                     <button id="themeToggleMobile" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="Toggle Dark Mode">
                         <i class="fa-solid fa-moon text-gray-600 dark:text-gray-300" id="themeIconMobile"></i>
@@ -101,7 +94,6 @@
                 </div>
             </div>
         </div>
-
         <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-dark-bg border-b border-gray-200 dark:border-gray-800 absolute w-full left-0 transition-all duration-300">
             <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
                 <a href="#" class="block px-3 py-3 rounded-md text-base font-semibold text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">News</a>
@@ -119,8 +111,6 @@
 
     <header class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-16">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white dark:bg-dark-card rounded-3xl overflow-hidden shadow-xl border border-gray-100 dark:border-gray-800 transition-colors">
-
-            <!-- Hero Text Content -->
             <div class="p-8 md:p-12 order-2 md:order-1 flex flex-col justify-center">
                 <div class="inline-block px-3 py-1 mb-4 rounded-full bg-brand/10 text-brand font-bold text-sm border border-brand/20 w-max">
                     Exclusive Report
@@ -135,13 +125,11 @@
                     <a href="#" class="bg-brand hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-full text-center transition-transform hover:-translate-y-1 shadow-lg shadow-brand/40 flex justify-center items-center">
                         Read Article <i class="fa-solid fa-arrow-right ml-2"></i>
                     </a>
-                    <!-- CTA Affiliate inside Hero -->
                     <a href="#" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-bold py-3 px-8 rounded-full text-center transition-transform hover:-translate-y-1 shadow-xl flex justify-center items-center">
                         <i class="fa-solid fa-shoe-prints mr-2 text-brand dark:text-brand-dark"></i> See Their Boots
                     </a>
                 </div>
             </div>
-
             <div class="order-1 md:order-2 h-64 md:h-full relative group overflow-hidden">
                 <img src="https://placehold.co/800x800/0f172a/10b981?text=Elite+Midfielder" alt="Football Player" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -153,7 +141,6 @@
     </header>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-
         <div class="flex justify-between items-end mb-8 border-b border-gray-200 dark:border-gray-800 pb-4">
             <h2 class="text-2xl md:text-3xl font-bold flex items-center">
                 <i class="fa-solid fa-fire text-orange-500 mr-3"></i> Latest News & Gear
@@ -161,10 +148,8 @@
             <a href="#" class="text-brand font-semibold hover:underline hidden sm:block">View All <i class="fa-solid fa-angle-right"></i></a>
         </div>
 
-        <!-- CSS Grid layout for mixed content (News + Affiliate Products) -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            <!-- Standard News Card -->
+            <!-- News Card -->
             <article class="bg-white dark:bg-dark-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 dark:border-gray-800 transition-all group cursor-pointer flex flex-col">
                 <div class="relative h-48 overflow-hidden">
                     <img src="https://placehold.co/600x400/334155/e2e8f0?text=Sports+News" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="News Image">
@@ -179,7 +164,7 @@
                 </div>
             </article>
 
-            <!-- Affiliate Product Card (High Conversion Design) -->
+            <!-- Affiliate Product Card -->
             <article class="bg-gradient-to-br from-white to-gray-50 dark:from-dark-card dark:to-slate-800 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl border-2 border-brand/20 transition-all group relative flex flex-col">
                 <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded shadow-lg z-10 animate-pulse">
                     Hot Deal 🔥
@@ -191,14 +176,13 @@
                     <h3 class="text-xl font-bold mb-1">Official 2024/25 Kit</h3>
                     <p class="text-brand font-extrabold text-2xl mb-3">$89.99 <span class="text-sm text-gray-500 dark:text-gray-400 line-through font-normal">$120.00</span></p>
                     <p class="text-gray-600 dark:text-gray-400 text-sm mb-5">Show your true colors! This high-quality jersey is currently discounted for a limited time only.</p>
-                    <!-- Target _blank is important for affiliates -->
                     <a href="#" target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-brand hover:bg-brand-dark text-white font-bold py-3 px-4 rounded-xl transition-colors shadow-md flex justify-center items-center">
                         <i class="fa-solid fa-bag-shopping mr-2"></i> Buy Now (Amazon)
                     </a>
                 </div>
             </article>
 
-            <!-- Standard News Card -->
+            <!-- News Card -->
             <article class="bg-white dark:bg-dark-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 dark:border-gray-800 transition-all group cursor-pointer flex flex-col">
                 <div class="relative h-48 overflow-hidden">
                     <img src="https://placehold.co/600x400/1e293b/f8fafc?text=Analysis" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Analysis Image">
@@ -212,126 +196,14 @@
                     </div>
                 </div>
             </article>
-
-            <!-- Affiliate Product Card -->
-            <article class="bg-white dark:bg-dark-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 dark:border-gray-800 transition-all group flex flex-col">
-                <div class="relative h-48 bg-gray-100 dark:bg-slate-700 p-4 flex justify-center items-center">
-                    <img src="https://placehold.co/400x300/e2e8f0/059669?text=Football+Boots" class="max-h-full max-w-full object-contain drop-shadow-lg transition-transform group-hover:scale-105" alt="Football Boots">
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-lg font-bold">Pro-Speed Football Boots</h3>
-                        <div class="flex text-yellow-400 text-xs">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">The lightest speed boots chosen by top-tier midfielders and attacking wingers.</p>
-                    <div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-700 flex justify-between items-center">
-                        <span class="font-bold text-xl">$145.00</span>
-                        <a href="#" target="_blank" class="bg-gray-900 dark:bg-gray-100 hover:bg-brand dark:hover:bg-brand text-white dark:text-gray-900 dark:hover:text-white px-4 py-2 rounded-lg font-bold text-sm transition-colors">
-                            Visit Site <i class="fa-solid fa-external-link-alt ml-1 text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Standard News Card -->
-            <article class="bg-white dark:bg-dark-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 dark:border-gray-800 transition-all group cursor-pointer flex flex-col">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="https://placehold.co/600x400/475569/f1f5f9?text=Transfer+Rumors" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Transfer News">
-                    <div class="absolute top-3 right-3 bg-brand text-white text-xs font-bold px-2 py-1 rounded shadow">Transfers</div>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand transition-colors">Crazy money demanded for the star striker</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3">Negotiations seem to be progressing well, although the player's club officially rejected the initial offer placed yesterday...</p>
-                    <div class="mt-auto flex items-center text-xs text-gray-500 dark:text-gray-400 font-semibold">
-                        <i class="fa-regular fa-clock mr-1"></i> Yesterday
-                    </div>
-                </div>
-            </article>
-
-            <!-- Affiliate Service / Digital Product -->
-            <article class="bg-gradient-to-br from-indigo-900 to-purple-900 rounded-2xl overflow-hidden shadow-lg border border-indigo-700 transition-all group text-white flex flex-col justify-center items-center text-center p-8 relative">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-bl-full -z-0"></div>
-                <i class="fa-solid fa-tv text-5xl text-brand mb-4 z-10"></i>
-                <h3 class="text-2xl font-bold mb-2 z-10">Live Streaming!</h3>
-                <p class="text-indigo-200 text-sm mb-6 z-10">Sign up to this premium platform to watch all league matches uninterrupted in stunning HD.</p>
-                <a href="#" target="_blank" class="z-10 bg-brand hover:bg-emerald-400 text-white font-extrabold py-3 px-6 rounded-full w-full transition-transform hover:scale-105 shadow-[0_0_15px_rgba(16,185,129,0.5)]">
-                    Sign Up Now <i class="fa-solid fa-play ml-1"></i>
-                </a>
-            </article>
-
         </div>
     </main>
 
-    <section class="w-full bg-brand dark:bg-brand-dark py-12 relative overflow-hidden mb-16">
-        <!-- Abstract background shapes -->
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-0 left-10 w-40 h-40 bg-white rounded-full mix-blend-overlay filter blur-xl"></div>
-            <div class="absolute bottom-0 right-20 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-2xl"></div>
-        </div>
-
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
-            <span class="bg-white text-brand text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block shadow">Exclusive Member Offer</span>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Play like the pros</h2>
-            <p class="text-emerald-50 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-                The latest sports equipment, gym gear, and training accessories used by world-class athletes. Get a 20% discount when you use the code <span class="bg-white/20 px-2 py-1 rounded font-mono font-bold">BANTER20</span>
-            </p>
-            <a href="#" class="inline-block bg-white text-brand hover:bg-gray-100 font-extrabold py-4 px-10 rounded-full text-lg shadow-xl transition-transform hover:-translate-y-1">
-                Visit Mega Store <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
-            </a>
-        </div>
-    </section>
-
     <footer class="bg-white dark:bg-dark-card border-t border-gray-200 dark:border-gray-800 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-
-                <!-- Brand Info -->
-                <div class="col-span-1 md:col-span-1">
-                    <div class="flex items-center gap-2 mb-4">
-                        <i class="fa-solid fa-bolt text-brand text-2xl"></i>
-                        <span class="font-bold text-2xl tracking-tight">Pitch<span class="text-brand">Banter</span></span>
-                    </div>
-                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
-                        The premier hub for sports analysis, fan banter, and top-quality sports gear.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/share/g/1953fhgAhm/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-600 transition-colors" title="Join our Facebook Group"><i class="fa-brands fa-facebook text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors"><i class="fa-brands fa-twitter text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-pink-600 transition-colors"><i class="fa-brands fa-instagram text-xl"></i></a>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="font-bold mb-4 uppercase tracking-wider text-sm">Pages</h4>
-                    <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
-                        <li><a href="#" class="hover:text-brand transition-colors">Latest News</a></li>
-                        <li><a href="#" class="hover:text-brand transition-colors">Analysis & Debate</a></li>
-                        <li><a href="#" class="hover:text-brand transition-colors">Transfer Market</a></li>
-                        <li><a href="#" class="hover:text-brand transition-colors">Gear Store</a></li>
-                    </ul>
-                </div>
-
-                <!-- Newsletter (Lead Gen) -->
-                <div class="col-span-1 md:col-span-2">
-                    <h4 class="font-bold mb-4 uppercase tracking-wider text-sm">Subscribe to Newsletter</h4>
-                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">
-                        Get the hottest sports news and exclusive sports gear discounts delivered straight to your inbox.
-                    </p>
-                    <form class="flex flex-col sm:flex-row gap-2">
-                        <input type="email" placeholder="Enter your email..." class="flex-grow px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent dark:text-white" required>
-                        <button type="submit" class="bg-gray-900 dark:bg-brand hover:bg-gray-800 dark:hover:bg-brand-dark text-white font-bold py-3 px-6 rounded-lg transition-colors whitespace-nowrap">
-                            Subscribe
-                        </button>
-                    </form>
-                </div>
-            </div>
-
             <div class="border-t border-gray-200 dark:border-gray-800 pt-8 mt-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-xs text-gray-400 dark:text-gray-500 max-w-3xl">
-                    <strong class="text-gray-500 dark:text-gray-400">Affiliate Disclosure:</strong> Posts on PitchBanter may contain affiliate links. If you click on these links and make a purchase, we may earn a small commission at no extra cost to you. This helps us keep this site running and providing free content.
+                    <strong class="text-gray-500 dark:text-gray-400">Affiliate Disclosure:</strong> Posts on PitchBanter may contain affiliate links. If you click on these links and make a purchase, we may earn a small commission at no extra cost to you.
                 </p>
                 <div class="text-xs text-gray-400 dark:text-gray-500 font-semibold whitespace-nowrap">
                     &copy; 2026 PitchBanter. All rights reserved.
@@ -349,7 +221,6 @@
             const themeIconMobile = document.getElementById('themeIconMobile');
             const htmlElement = document.documentElement;
 
-            // Check system preference or localStorage
             if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 htmlElement.classList.add('dark');
                 updateIcons(true);
@@ -378,7 +249,7 @@
             themeToggleBtn.addEventListener('click', toggleTheme);
             themeToggleMobileBtn.addEventListener('click', toggleTheme);
 
-            // Mobile Menu Toggle Logic
+            // Mobile Menu
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const mobileMenu = document.getElementById('mobileMenu');
             const menuIcon = mobileMenuBtn.querySelector('i');
@@ -392,6 +263,17 @@
                 }
             });
         });
+
+        // Netlify Identity login redirection
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
     </script>
 </body>
 </html>
