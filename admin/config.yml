@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: zakaraam98-wq/pitchbanter
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "blog"
+    label: "Posts & Gear"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Category", name: "category", widget: "select", options: ["News", "Analysis", "Transfers", "Gear"] }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Price (If Gear)", name: "price", widget: "string", required: false }
+      - { label: "Affiliate Link", name: "link", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
